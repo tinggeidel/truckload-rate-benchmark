@@ -1,0 +1,29 @@
+# Generated pipeline artifacts — everything under data/ except the committed reference tables
+data/*
+!data/reference/
+!data/reference/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Outputs
+out/
+*.xlsx
+!docs/**/*.xlsx
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Never commit a real TMS export or a licensed market-data pull
+*_export.xlsx
+shipments*.csv
+rateview*.csv

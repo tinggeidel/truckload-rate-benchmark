@@ -1,0 +1,11 @@
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1
+
+# Optional. The demo runs entirely from the bundled centroid table in
+# data/reference/; pgeocode is only needed to resolve postal codes outside the
+# demo geography, i.e. when pointing the pipeline at a real export.
+pgeocode>=0.4
+
+# Tests
+pytest>=7.0

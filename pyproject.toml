@@ -1,0 +1,18 @@
+[project]
+name = "truckload-rate-benchmark"
+version = "1.0.0"
+description = "Benchmark a freight brokerage's truckload buy rates against lane-level market data"
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0", "numpy>=1.24", "openpyxl>=3.1"]
+
+[project.optional-dependencies]
+geo = ["pgeocode>=0.4"]
+test = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]
+filterwarnings = ["error::FutureWarning"]
+
+[tool.setuptools]
+packages = ["tlbench"]
